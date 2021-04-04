@@ -7,8 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
   <ion-card *ngIf="information">
     <ion-card-header>
       <ion-card-title>
@@ -19,9 +18,11 @@
       </ion-card-subtitle>
     </ion-card-header>
 
-    <ion-card-content center>
+
+    <ion-card-content>
       <img [src]="information.Poster" class="info.img"><br>
-      {{ information.Plot }}
+        <ion-label text-wrap>{{ information.Plot }}</ion-label>
+
       <ion-item lines="none">
         <ion-icon name="star-half" slot="start"></ion-icon>
         <ion-label>{{ information.imdbRating }}</ion-label>
@@ -37,12 +38,7 @@
         <ion-label text-wrap>{{ information.Actors }}</ion-label>
       </ion-item>
 
-      <ion-button expand="full" (click)="openWebsite()" *ngIf="information.Website && information.Website != 'N/A'">
-        Open Website
-      </ion-button>
-
     </ion-card-content>
 
   </ion-card>
-
 </ion-content>

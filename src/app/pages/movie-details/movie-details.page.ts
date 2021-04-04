@@ -21,8 +21,4 @@ export class MovieDetailsPage implements OnInit {
     });
   }
 
-  openWebsite() {
-    window.open(this.information.Website, '_blank');
-  }
-
 }
