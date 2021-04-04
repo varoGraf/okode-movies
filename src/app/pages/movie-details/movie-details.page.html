@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
   <ion-card *ngIf="information">
     <ion-card-header>
@@ -19,10 +19,9 @@
       </ion-card-subtitle>
     </ion-card-header>
 
-    <ion-card-content text-center>
-      <img [src]="information.Poster" class="info.img">
+    <ion-card-content center>
+      <img [src]="information.Poster" class="info.img"><br>
       {{ information.Plot }}
-
       <ion-item lines="none">
         <ion-icon name="star-half" slot="start"></ion-icon>
         <ion-label>{{ information.imdbRating }}</ion-label>
